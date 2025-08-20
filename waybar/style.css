@@ -1,0 +1,194 @@
+@import url('colors-waybar.css');
+
+* {
+  border: none;
+  min-height: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: rgba(0,0,0,0.5);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#waybar{
+  border:1px double grey;
+  border-radius: 20px;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces {
+  background-color: transparent;
+}
+
+#workspaces button {
+  all: initial;
+  /* Remove GTK theme values (waybar #1351) */
+  min-width: 3px;
+  /* Fix weird spacing in materia (waybar #450) */
+  /* Use box-shadow instead of border so the text isn't offset */
+  transition: padding .1s ease;
+  padding: 3px 14px;
+  margin: 6px 3px;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  font-weight: bold;
+}
+
+
+#workspaces button.empty {
+  font-weight: normal;
+  color: gray;
+}
+
+#workspaces button.active {
+  min-width:10px;
+  padding:3px 20px;
+  margin: 6px 3px;
+  color: @color14;
+  border:3px solid @color14;
+  background-color: rgba(0,0,0,0.3);
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #1e1e2e;
+  background-color: @color11;
+}
+
+#workspaces button.urgent {
+  background-color: firebrick;
+}
+
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#bluetooth,
+#network,
+#clock,
+#stats,
+#tray {
+  border-radius: 25px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+  background-color: rgba(0,0,0,0.5);
+  color: rgb(255,255,255);
+}
+
+#cpu,
+#memory {
+  color: rgb(255,255,255);
+  padding: 0px 6px;
+}
+
+#battery{
+  margin-right:10px
+}
+
+#clock{
+  border:2px dashed grey;
+}
+
+#custom-power {
+  margin-right: 10px;
+  background-color: @foreground;
+  border: 2px dotted white;
+  color:rgb(0,0,0);
+  padding:3px 12px 3px 10px;
+}
+
+
+#custom-logo {
+  margin:0px 10px;
+  font-size:17px;
+  border-radius: 8px 0px 0px 8px;
+  color: #ffffff;
+}
+
+/*
+#memory {
+  background-color: #fab387;
+}
+
+#battery {
+  background-color: #f38ba8;
+}
+*/
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  border:2px solid firebrick;
+}
+
+#bluetooth.connected{
+  border:1px solid deepskyblue
+}
+
+#battery.charging {
+  border:2px solid darkseagreen;
+}
+
+#backlight {
+  background-color: #fab387;
+}
+
+#pulseaudio {
+  padding: 7px 20px;
+}
+
+#custom-dropdown{
+  color : white;
+}
+
+#network {
+  padding-right: 17px;
+}
+
+#taskbar {
+  background-color: rgba(0,0,0,0.5);
+  margin:6px 4px;
+  border-radius: 20px;
+}
+
+#taskbar button {
+  border-radius:20px;
+  padding:2px 8px;
+}
+
+#taskbar button.active{
+  border:2px solid white
+}
+
+#taskbar button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+#clock {
+  font-family: JetBrainsMono Nerd Font;
+  background-color: rgba(0,0,0,.8);
+}
+
+tooltip {
+  border-radius: 15px;
+  border:2px solid grey;
+  margin:0px;
+  background-color: rgba(10,10,10,0.8);
+}
+
+tooltip label {
+  border-radius: 13px;
+  font-size:12px;
+  font-weight:bold;
+}

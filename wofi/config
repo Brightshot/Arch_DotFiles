@@ -1,0 +1,9 @@
+show=drun
+allow_images=true
+insensitive=true
+show_all=false
+always_parse_args=true
+close_on_focus_loss=true 
+layer=overlay
+width=750
+height=400

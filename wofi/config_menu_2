@@ -1,0 +1,7 @@
+layer=overlay
+hide_search=true
+width=400
+height=400
+show=dmenu
+columns=2
+style=~/wofi/menu.css
